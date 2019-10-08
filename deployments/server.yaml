@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: server-deployment
+spec:
+  selector:
+    matchLabels:
+      pod: server-deployment
+  template:
+    metadata:
+      labels:
+        pod: server-deployment
+    spec:
+      containers:
+        - name: server-deployment-container
+          imagePullPolicy: Always
+          image: gcr.io/analytics-team-253708/server-demo
