@@ -7,6 +7,11 @@ title = 'Server'
 def hello_world():
     return 'Hello World!'
 
+
+@app.route('/server/world')
+def hello_world_from_server():
+    return 'Hello World! From'%title
+
 @app.route('/world')
 def bro_world():
     return 'Bro World! From %s'%title
